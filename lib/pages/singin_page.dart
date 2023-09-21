@@ -27,10 +27,10 @@ class SinginPage extends StatelessWidget {
             children: [
               Image.asset(
                 'asset/icon.png',
-                width: 180,
+                width: 120,
                 fit: BoxFit.fitWidth,
               ),
-              const SizedBox(height: 80),
+              const SizedBox(height: 50),
               Align(
                 alignment: Alignment.center,
                 child: Text(
