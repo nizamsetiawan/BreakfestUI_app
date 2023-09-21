@@ -19,146 +19,150 @@ class SingupPage extends StatelessWidget {
           color: Colors.black,
         ),
       ),
-      body: LayoutBuilder(builder: (context, constraints) {
-        return Padding(
-          padding: const EdgeInsets.all(16),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset(
-                'asset/icon.png',
-                width: 120,
-                fit: BoxFit.fitWidth,
-              ),
-              const SizedBox(height: 80),
-              Align(
-                alignment: Alignment.center,
-                child: Text(
-                  'Buat akun Baru',
-                  style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                        fontWeight: FontWeight.bold,
-                      ),
+      body: SingleChildScrollView(
+        child: LayoutBuilder(builder: (context, constraints) {
+          return Padding(
+            padding: const EdgeInsets.all(16),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset(
+                  'asset/icon.png',
+                  width: 120,
+                  fit: BoxFit.fitWidth,
                 ),
-              ),
-              const SizedBox(height: 20),
-              Row(
-                children: [
-                  Expanded(
-                    child: TextFormField(
-                      decoration: InputDecoration(
-                        isDense: true,
-                        filled: true,
-                        fillColor: Colors.white,
-                        contentPadding: const EdgeInsets.symmetric(
-                            horizontal: 16, vertical: 16),
-                        hintText: 'Nama Depan', // Ubah hintText ini
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(30),
+                const SizedBox(height: 80),
+                Align(
+                  alignment: Alignment.center,
+                  child: Text(
+                    'Buat akun Baru',
+                    style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                          fontWeight: FontWeight.bold,
                         ),
-                        focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(30),
-                          borderSide: const BorderSide(color: AppColor.primary),
-                        ),
-                        enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(30),
-                          borderSide: BorderSide.none,
-                        ),
-                      ),
-                    ),
                   ),
-                  const SizedBox(width: 16.0),
-                  Expanded(
-                    child: TextFormField(
-                      decoration: InputDecoration(
-                        isDense: true,
-                        filled: true,
-                        fillColor: Colors.white,
-                        contentPadding: const EdgeInsets.symmetric(
-                            horizontal: 16, vertical: 16),
-                        hintText: 'Nama Belakang', // Ubah hintText ini
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(30),
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(30),
-                          borderSide: const BorderSide(color: AppColor.primary),
-                        ),
-                        enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(30),
-                          borderSide: BorderSide.none,
+                ),
+                const SizedBox(height: 20),
+                Row(
+                  children: [
+                    Expanded(
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                          isDense: true,
+                          filled: true,
+                          fillColor: Colors.white,
+                          contentPadding: const EdgeInsets.symmetric(
+                              horizontal: 16, vertical: 16),
+                          hintText: 'Nama Depan', // Ubah hintText ini
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(30),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(30),
+                            borderSide:
+                                const BorderSide(color: AppColor.primary),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(30),
+                            borderSide: BorderSide.none,
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 20),
-              TextFormField(
-                obscureText: true,
-                decoration: InputDecoration(
-                  isDense: true,
-                  filled: true,
-                  fillColor: Colors.white,
-                  contentPadding:
-                      const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
-                  hintText: 'Email',
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(30),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(30),
-                    borderSide: const BorderSide(color: AppColor.primary),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(30),
-                    borderSide: BorderSide.none,
+                    const SizedBox(width: 16.0),
+                    Expanded(
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                          isDense: true,
+                          filled: true,
+                          fillColor: Colors.white,
+                          contentPadding: const EdgeInsets.symmetric(
+                              horizontal: 16, vertical: 16),
+                          hintText: 'Nama Belakang', // Ubah hintText ini
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(30),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(30),
+                            borderSide:
+                                const BorderSide(color: AppColor.primary),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(30),
+                            borderSide: BorderSide.none,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 20),
+                TextFormField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    isDense: true,
+                    filled: true,
+                    fillColor: Colors.white,
+                    contentPadding: const EdgeInsets.symmetric(
+                        horizontal: 16, vertical: 16),
+                    hintText: 'Email',
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(30),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(30),
+                      borderSide: const BorderSide(color: AppColor.primary),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(30),
+                      borderSide: BorderSide.none,
+                    ),
                   ),
                 ),
-              ),
-              const SizedBox(height: 20),
-              TextFormField(
-                obscureText: true,
-                decoration: InputDecoration(
-                  isDense: true,
-                  filled: true,
-                  fillColor: Colors.white,
-                  contentPadding:
-                      const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
-                  hintText: 'Password',
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(30),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(30),
-                    borderSide: const BorderSide(color: AppColor.primary),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(30),
-                    borderSide: BorderSide.none,
+                const SizedBox(height: 20),
+                TextFormField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    isDense: true,
+                    filled: true,
+                    fillColor: Colors.white,
+                    contentPadding: const EdgeInsets.symmetric(
+                        horizontal: 16, vertical: 16),
+                    hintText: 'Password',
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(30),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(30),
+                      borderSide: const BorderSide(color: AppColor.primary),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(30),
+                      borderSide: BorderSide.none,
+                    ),
                   ),
                 ),
-              ),
-              const SizedBox(height: 30),
-              MyButton(
-                label: 'Daftar',
-                colorButton: AppColor.primary,
-                onTap: () =>
-                    Navigator.pushReplacementNamed(context, AppRoute.homepage),
-              ),
-              const SizedBox(height: 15),
-              TextButton(
-                  onPressed: () {
-                    Navigator.pushReplacementNamed(
-                        context, AppRoute.singuppage);
-                  },
-                  child: const Text(
-                    'Sudah Punya Akun',
-                    style: TextStyle(color: Colors.grey),
-                  )),
-            ],
-          ),
-        );
-      }),
+                const SizedBox(height: 30),
+                MyButton(
+                  label: 'Daftar',
+                  colorButton: AppColor.primary,
+                  onTap: () => Navigator.pushReplacementNamed(
+                      context, AppRoute.homepage),
+                ),
+                const SizedBox(height: 15),
+                TextButton(
+                    onPressed: () {
+                      Navigator.pushReplacementNamed(
+                          context, AppRoute.singuppage);
+                    },
+                    child: const Text(
+                      'Sudah Punya Akun',
+                      style: TextStyle(color: Colors.grey),
+                    )),
+              ],
+            ),
+          );
+        }),
+      ),
     );
   }
 }
