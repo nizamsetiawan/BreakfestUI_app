@@ -4,11 +4,33 @@ import 'package:breakfast/config/app.route.dart';
 import 'package:breakfast/models/diet_model.dart';
 
 // ignore: must_be_immutable
-class DetailsPage extends StatelessWidget {
-  DetailsPage({super.key});
+class DetailsPage extends StatefulWidget {
+  const DetailsPage({super.key});
+
+  @override
+  State<DetailsPage> createState() => _DetailsPageState();
+}
+
+class _DetailsPageState extends State<DetailsPage> {
   List<DietModel> diets = [];
+  int value = 0; // Nilai awal
+
   void _getInitialInfo() {
     diets = DietModel.getDiets();
+  }
+
+  void add() {
+    setState(() {
+      value++; // Tambah 1 ke nilai
+    });
+  }
+
+  void min() {
+    setState(() {
+      if (value > 0) {
+        value--; // Kurangi 1 dari nilai jika nilai > 0
+      }
+    });
   }
 
   @override
@@ -82,6 +104,45 @@ class DetailsPage extends StatelessWidget {
               ),
             ),
           ),
+          Container(
+            color: AppColor.primary,
+            padding: const EdgeInsets.all(20),
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment
+                      .center, // Menengahkan elemen-elemen dalam Row secara horizontal
+                  children: [
+                    const Text(
+                      'Buy : ',
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                    ),
+                    Align(
+                      alignment: Alignment
+                          .center, // Menengahkan elemen-elemen dalam Align secara vertikal
+                      child: Row(
+                        children: [
+                          IconButton(
+                            onPressed: add,
+                            icon: const Icon(Icons.add),
+                          ),
+                          Text(
+                            '$value',
+                            style: const TextStyle(fontSize: 24.0),
+                          ),
+                          IconButton(
+                            onPressed: min,
+                            icon: const Icon(Icons.remove),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          )
         ],
       ),
     );

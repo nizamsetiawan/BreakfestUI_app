@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
         AppRoute.singinpage: (context) => const SinginPage(),
         AppRoute.singuppage: (context) => const SingupPage(),
         AppRoute.homepage: (context) => HomePage(),
-        AppRoute.detailspage: (context) => DetailsPage(),
+        AppRoute.detailspage: (context) => const DetailsPage(),
       },
     );
   }

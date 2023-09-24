@@ -26,12 +26,13 @@ class SingupPage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                const SizedBox(height: 50),
                 Image.asset(
                   'asset/icon.png',
                   width: 120,
                   fit: BoxFit.fitWidth,
                 ),
-                const SizedBox(height: 80),
+                const SizedBox(height: 40),
                 Align(
                   alignment: Alignment.center,
                   child: Text(
